@@ -50,10 +50,27 @@ let navigation = document.querySelectorAll ("nav a");
     navigation[4] .textContent = siteContent["nav"]["nav-item-5"];
     navigation[5] .textContent = siteContent["nav"]["nav-item-6"];
 
+//turn font link color to green
 let navA = document.getElementsByTagName("a");
-
 let navArray = Array.from(navA);
   navArray.forEach((navA, i) => {
   navA.style.color = "green";
 });
 
+//Appended
+const newLink = document.createElement("A");
+const randomTextNode1 = document.createTextNode("Appended");
+const setAppendChild = newLink.appendChild(randomTextNode1);
+const appendToNav =document.querySelector("nav").appendChild(newLink);
+
+//Prepended
+const newLink2 = document.createElement("A");
+const randomTextNode2 = document.createTextNode("Prepended");
+const setPrepend = newLink2.prepend(randomTextNode2);
+const prependToNav = document.querySelector("nav").prepend(newLink2);
+
+//update src path content
+const ctaImage = document.getElementById("cta-img");const setCtaImage = ctaImage.setAttribute('src', siteContent.cta["img-src"]);
+
+const middleImage = document.getElementById("middle-img");
+const setMiddleImage = middleImage.setAttribute('src', siteContent["main-content"] ["middle-img-src"]);
